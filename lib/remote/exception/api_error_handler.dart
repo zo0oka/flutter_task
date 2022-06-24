@@ -34,7 +34,7 @@ class ApiErrorHandler {
                   break;
                 case 400:
                 case 403:
-                  print(error.response!.data!);
+                  log(error.response!.data!);
                   ErrorResponse errorResponse =
                       ErrorResponse.fromJson(error.response!.data);
                   errorDescription = errorResponse.errors!;

@@ -16,6 +16,8 @@ class User {
   String? gender;
   @JsonKey(name: 'age')
   int? age;
+  @JsonKey(name: 'image')
+  String? image;
 
   User(
       {this.userId,
@@ -23,7 +25,8 @@ class User {
       this.lastName,
       this.fullName,
       this.gender,
-      this.age});
+      this.age,
+      this.image});
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
